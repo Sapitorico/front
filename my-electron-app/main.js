@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, autoUpdater } = require('electron')
 const path = require('path')
 
 const createWindow = () => {
@@ -7,8 +7,8 @@ const createWindow = () => {
     height: 600,
     minWidth: 800,
     minHeight: 600,
-    maxWidth: 800,
-    maxHeight: 600,
+    maxWidth: autoUpdater,
+    maxHeight: autoUpdater,
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js')
